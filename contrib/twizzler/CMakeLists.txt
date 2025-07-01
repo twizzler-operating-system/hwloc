@@ -121,7 +121,7 @@ add_library(hwloc
     ${TOPDIR}/hwloc/topology-synthetic.c
     ${TOPDIR}/hwloc/topology-xml.c
     ${TOPDIR}/hwloc/topology-xml-nolibxml.c
-    ${TOPDIR}/hwloc/topology-fake.c
+    ${TOPDIR}/hwloc/topology-noos.c
     ${TOPDIR}/hwloc/topology-x86.c
     $<$<BOOL:${HWLOC_HAVE_LIBXML2}>:${TOPDIR}/hwloc/topology-xml-libxml.c>
     $<$<BOOL:${HWLOC_HAVE_OPENCL}>:${TOPDIR}/hwloc/topology-opencl.c>
