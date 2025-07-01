@@ -122,7 +122,7 @@ add_library(hwloc
     ${TOPDIR}/hwloc/topology-xml.c
     ${TOPDIR}/hwloc/topology-xml-nolibxml.c
     ${TOPDIR}/hwloc/topology-noos.c
-    ${TOPDIR}/hwloc/topology-x86.c
+    $<$<BOOL:${HWLOC_HAVE_X86_CPUID}>:${TOPDIR}/hwloc/topology-x86.c>
     $<$<BOOL:${HWLOC_HAVE_LIBXML2}>:${TOPDIR}/hwloc/topology-xml-libxml.c>
     $<$<BOOL:${HWLOC_HAVE_OPENCL}>:${TOPDIR}/hwloc/topology-opencl.c>
     $<$<BOOL:${HAVE_CUDA}>:${TOPDIR}/hwloc/topology-cuda.c>
